@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  app:
+    container_name: bookmanagement_angular
+    image: hikaruright/bookmanagement-angular:1.0.0
+    ports:
+      - 4200:80
+    
+  api:
+    container_name: bookmanagement_api
+    build: ./api
+    ports:
+      - 4300:4300
+    
